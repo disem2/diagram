@@ -1,11 +1,15 @@
 /**
  * Created by dima on 09.05.15.
  */
-var Point = Backbone.Model.extend({
-    defaults: {
-        position: {
-            x: null,
-            y: null
-        }
+
+var Point = Parse.Object.extend('Point', {
+    position: {
+        x: null,
+        y: null
+    },
+    dId: null,
+
+    setPosition: function(position) {
+        this.set('position', position);
     }
 });
